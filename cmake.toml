@@ -1,0 +1,15 @@
+[cmake]
+version = "3.15"
+cmkr-include = "cmake/cmkr.cmake"
+
+[project]
+name = "CPMSubLanguage"
+include-after = [
+    "cmake/CPM.cmake",
+    "cmake/masmlib.cmake",
+]
+
+[target.CPMSubLanguage]
+type = "executable"
+sources = ["src/main.cpp"]
+link-libraries = ["masmlib"]
